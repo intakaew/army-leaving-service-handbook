@@ -151,6 +151,23 @@ li{max-width:64ch}
 .warnline{color:var(--warn);font-size:.95rem}
 footer{padding:22px 24px;display:flex;flex-direction:column;gap:10px;font-size:.95rem;color:var(--muted)}
 @media (max-width:520px){ body{font-size:17px} section{padding:20px 16px;border-radius:18px} .cover .intro{padding:18px 16px} }
+/* จอแคบ: ตารางเงินเดือนเรียงเป็นการ์ดต่อแถว ช่องกรอกจะได้กว้างพอ */
+@media (max-width:600px){
+  .avgpanel{padding:14px 12px}
+  .avgpanel .tbl{border:0;background:none;overflow:visible;border-radius:0}
+  .avgpanel table,.avgpanel tbody{display:block;width:100%}
+  .avgpanel thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .avgpanel tbody tr{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr) minmax(0,1.3fr);gap:8px 10px;align-items:end;padding:12px;margin-bottom:10px;border:1px solid var(--glass-border);border-radius:14px;background:var(--card)}
+  .avgpanel tbody td{display:flex;flex-direction:column;gap:3px;padding:0;border:0;min-width:0}
+  .avgpanel tbody td[data-label]::before{content:attr(data-label);font-family:var(--display);font-size:.82rem;color:var(--muted)}
+  .avgpanel tbody td.cnt{grid-column:1 / 3;flex-direction:row;align-items:baseline;gap:6px;white-space:normal}
+  .avgpanel tbody td:last-child{grid-column:3;align-items:flex-end}
+  .avgpanel input[type=number]{padding:9px 8px;-moz-appearance:textfield;appearance:textfield}
+  .avgpanel input[type=number]::-webkit-outer-spin-button,.avgpanel input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+  .avgpanel .top input{width:100%}
+  .avgpanel .top label{flex:1 1 9em}
+  .avgres{flex-direction:column;align-items:stretch}
+}
 @media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ :root{--paper:rgba(255,255,255,.90)} :root[data-theme="dark"]{--paper:rgba(12,22,16,.92)} }
 </style>
@@ -527,9 +544,10 @@ footer{padding:22px 24px;display:flex;flex-direction:column;gap:10px;font-size:.
         inp.type='number'; inp.id='r'+i+f[0]; inp.min=f[1]; inp.max=f[2]; inp.step=f[3]; inp.value=r[f[0]];
         inp.setAttribute('aria-label',(f[0]==='m'?'เดือนที่เริ่มใช้':f[0]==='y'?'ปี พ.ศ.':'เงินเดือน')+' แถวที่ '+(i+1));
         inp.addEventListener('input',function(){ r[f[0]]=parseFloat(inp.value)||0; calcAvg(); });
+        td.setAttribute('data-label',f[0]==='m'?'เดือน':f[0]==='y'?'ปี พ.ศ.':'เงินเดือน');
         td.appendChild(inp); tr.appendChild(td);
       });
-      var tc=document.createElement('td'); tc.className='cnt'; tc.id='c'+i; tr.appendChild(tc);
+      var tc=document.createElement('td'); tc.className='cnt'; tc.id='c'+i; tc.setAttribute('data-label','นับได้'); tr.appendChild(tc);
       var tx=document.createElement('td'), b=document.createElement('button');
       b.type='button'; b.className='btn x'; b.textContent='ลบ'; b.setAttribute('aria-label','ลบแถวที่ '+(i+1));
       b.addEventListener('click',function(){ rows.splice(i,1); draw(); });
