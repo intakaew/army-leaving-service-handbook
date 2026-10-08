@@ -1,0 +1,72 @@
+คู่มือสิทธิเมื่อออกจากราชการ
+Copyright (c) 2026 วิรุฬห์วัชร อินต๊ะแก้ว
+
+คลังนี้ใช้สัญญาอนุญาตสองฉบับ แยกตามประเภทของงาน
+This repository is dual-licensed by type of material.
+
+
+1. เนื้อหา (Content) — CC BY-NC 4.0
+------------------------------------------------------------------------
+
+ข้อความ คำอธิบาย ตาราง แผนภาพ และการเรียบเรียงเนื้อหาใน index.html และ
+README.md เผยแพร่ภายใต้สัญญาอนุญาต Creative Commons
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)
+
+ข้อความสัญญาฉบับเต็ม: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+สรุปโดยย่อ (ไม่ใช่ข้อความแทนสัญญา):
+  - นำไปใช้ คัดลอก เผยแพร่ต่อ และดัดแปลงได้
+  - ต้องระบุชื่อผู้จัดทำ ใส่ลิงก์มายังคลังนี้ และบอกว่ามีการแก้ไขหรือไม่
+  - ห้ามนำไปใช้เพื่อการค้า
+
+The text, explanations, tables, diagrams and arrangement of content in
+index.html and README.md are licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License.
+
+
+2. โค้ด (Code) — MIT License
+------------------------------------------------------------------------
+
+โค้ด HTML, CSS และ JavaScript ใน index.html (โครงหน้า รูปแบบการแสดงผล
+เครื่องคิดเงิน และตารางคิดเงินเดือนเฉลี่ย) เผยแพร่ภายใต้ MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+3. สิ่งที่สัญญาอนุญาตนี้ไม่ครอบคลุม (Not covered)
+------------------------------------------------------------------------
+
+  - ภาพพื้นหลัง bg.jpg ไม่อยู่ภายใต้สัญญาอนุญาตทั้งสองฉบับ ห้ามนำไปใช้ต่อ
+    The background image bg.jpg is not covered by either license.
+  - ตัวบทกฎหมาย ข้อบังคับ ระเบียบ และหนังสือราชการที่อ้างถึง เป็นของ
+    หน่วยงานที่ออก ผู้จัดทำไม่ได้อ้างสิทธิ์ในตัวบทเหล่านั้น
+    Laws, regulations and official documents cited belong to the issuing
+    authorities; no rights are claimed over them.
+
+
+4. ข้อสงวน (Disclaimer)
+------------------------------------------------------------------------
+
+คู่มือนี้ไม่ใช่เอกสารทางราชการและไม่ใช่คำปรึกษาทางกฎหมายหรือการเงิน
+เผยแพร่ตามสภาพที่เป็นอยู่ ไม่มีการรับประกันความถูกต้องหรือความเป็นปัจจุบัน
+ผู้จัดทำไม่รับผิดต่อความเสียหายจากการนำไปใช้ ก่อนตัดสินใจให้หน่วยงานที่
+รับผิดชอบยืนยันทุกครั้ง
+
+This handbook is not an official document and is not legal or financial
+advice. It is provided as is, without warranty of any kind.
