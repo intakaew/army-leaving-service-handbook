@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>คู่มือสิทธิเมื่อออกจากราชการ</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* layout: แบบแอป สป.3 — ภาพพื้นหลังเต็มจอคลุมด้วยม่านสี แผ่นกระจกฝ้าวางเนื้อหา แถบนำทางลอยติดขอบบนพร้อมปุ่มสลับโหมด */
+:root{
+  --bg:#e6eee5; --veil-a:rgba(240,246,238,.18); --veil-b:rgba(236,243,234,.58);
+  --paper:rgba(255,255,255,.40); --card:rgba(255,255,255,.50); --field:#ffffff; --sheen:rgba(255,255,255,.55); --edge-top:rgba(255,255,255,.85); --edge-bottom:rgba(255,255,255,.18); --ink:#0f1c14; --muted:#3f4e44; --line:rgba(18,52,30,.18);
+  --glass-border:rgba(255,255,255,.62); --shadow:0 14px 44px rgba(12,36,20,.20);
+  --accent:#1b6436; --accent-soft:#dbeadc; --accent-ink:#ffffff;
+  --ok:#17703d; --ok-soft:#dcf1e3; --no:#b3261e; --no-soft:#fbe4e1; --warn:#7d5200; --warn-soft:#fbefd2;
+  --band1:#cfe3d2; --band2:#9ecaa6; --band3:#6fae7c; --band4:#2f7d49; --band5:#1f5f36;
+  --hero-fade:rgba(230,238,229,0);
+  --display:"Noto Sans Thai","IBM Plex Sans Thai",system-ui,sans-serif;
+  --body:"Noto Sans Thai","Sarabun",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#06110b; --veil-a:rgba(4,12,8,.24); --veil-b:rgba(4,12,8,.66);
+  --paper:rgba(10,22,15,.44); --card:rgba(255,255,255,.07); --field:#0e1a13; --sheen:rgba(255,255,255,.10); --edge-top:rgba(255,255,255,.28); --edge-bottom:rgba(255,255,255,.04); --ink:#f0f5f1; --muted:#b9c6bd; --line:rgba(255,255,255,.16);
+  --glass-border:rgba(255,255,255,.16); --shadow:0 16px 48px rgba(0,0,0,.55);
+  --accent:#8fd8a0; --accent-soft:#1d3325; --accent-ink:#08130c;
+  --ok:#86d9a1; --ok-soft:#163423; --no:#ffa197; --no-soft:#3e1c19; --warn:#f3c96f; --warn-soft:#3b2e11;
+  --band1:#24382a; --band2:#2f5239; --band3:#3d7049; --band4:#5a9a66; --band5:#8fd8a0;
+  color-scheme:dark } }
+:root[data-theme="dark"]{
+  --bg:#06110b; --veil-a:rgba(4,12,8,.24); --veil-b:rgba(4,12,8,.66);
+  --paper:rgba(10,22,15,.44); --card:rgba(255,255,255,.07); --field:#0e1a13; --sheen:rgba(255,255,255,.10); --edge-top:rgba(255,255,255,.28); --edge-bottom:rgba(255,255,255,.04); --ink:#f0f5f1; --muted:#b9c6bd; --line:rgba(255,255,255,.16);
+  --glass-border:rgba(255,255,255,.16); --shadow:0 16px 48px rgba(0,0,0,.55);
+  --accent:#8fd8a0; --accent-soft:#1d3325; --accent-ink:#08130c;
+  --ok:#86d9a1; --ok-soft:#163423; --no:#ffa197; --no-soft:#3e1c19; --warn:#f3c96f; --warn-soft:#3b2e11;
+  --band1:#24382a; --band2:#2f5239; --band3:#3d7049; --band4:#5a9a66; --band5:#8fd8a0;
+  color-scheme:dark }
+:root[data-theme="light"]{color-scheme:light}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.85;margin:0;position:relative;isolation:isolate;min-height:100%}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:url("bg.jpg") 50% 35%/cover no-repeat}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,var(--veil-a) 0%,var(--veil-b) 46%,var(--veil-b) 100%)}
+.wrap{max-width:940px;margin-inline:auto;padding-inline:16px;padding-block:clamp(120px,24vw,260px) 72px;display:flex;flex-direction:column;gap:26px}
+h1,h2,h3{font-family:var(--display);line-height:1.35;text-wrap:balance;margin:0;letter-spacing:0}
+h1{font-size:clamp(1.9rem,5.2vw,2.7rem);font-weight:700}
+h2{font-size:1.6rem;font-weight:700}
+h3{font-size:1.18rem;font-weight:600}
+p{margin:0;max-width:64ch}
+strong,b{font-weight:600}
+a{color:var(--accent)}
+.kicker{font-family:var(--display);font-size:.9rem;font-weight:600;color:var(--accent)}
+.lead{font-size:1.15rem;color:var(--ink)}
+
+/* แผ่นกระจกฝ้า */
+.glass, section, .avgpanel, .calc, footer{position:relative;background:linear-gradient(135deg,var(--sheen) 0%,var(--paper) 22%,var(--paper) 100%);border:1px solid var(--glass-border);border-radius:26px;box-shadow:var(--shadow),inset 0 1px 0 var(--edge-top),inset 0 -1px 0 var(--edge-bottom);-webkit-backdrop-filter:blur(30px) saturate(190%);backdrop-filter:blur(30px) saturate(190%)}
+section{padding:26px 24px;display:flex;flex-direction:column;gap:18px;scroll-margin-top:76px}
+section .calc, section .avgpanel{box-shadow:inset 0 1px 0 var(--edge-top);-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--card);border:1px solid var(--glass-border);border-radius:18px}
+
+/* ปก */
+.cover{display:flex;flex-direction:column;gap:0}
+.cover .intro{margin:0;border-radius:26px;border:1px solid var(--glass-border);background:linear-gradient(135deg,var(--sheen) 0%,var(--paper) 24%,var(--paper) 100%);box-shadow:var(--shadow),inset 0 1px 0 var(--edge-top),inset 0 -1px 0 var(--edge-bottom);-webkit-backdrop-filter:blur(30px) saturate(190%);backdrop-filter:blur(30px) saturate(190%);padding:26px;display:flex;flex-direction:column;gap:14px}
+.notice{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.98rem;line-height:1.75}
+.notice strong{color:var(--warn)}
+.unofficial{font-family:var(--display);font-size:.9rem;font-weight:600;color:var(--no)}
+
+/* แถบนำทาง */
+.topbar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 8px);z-index:5;display:flex;gap:8px;align-items:center;background:linear-gradient(135deg,var(--sheen) 0%,var(--paper) 30%,var(--paper) 100%);border:1px solid var(--glass-border);border-radius:999px;box-shadow:var(--shadow),inset 0 1px 0 var(--edge-top);-webkit-backdrop-filter:blur(30px) saturate(190%);backdrop-filter:blur(30px) saturate(190%);padding:6px 6px 6px 10px;min-width:0}
+nav.toc{display:flex;gap:4px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc a{flex:none;font-family:var(--display);font-size:.9rem;font-weight:500;text-decoration:none;color:var(--ink);border-radius:999px;padding:6px 12px}
+nav.toc a:hover{background:var(--accent-soft)}
+.theme-toggle{flex:none;font-family:var(--display);font-size:.88rem;font-weight:600;border:1px solid var(--glass-border);background:var(--card);box-shadow:inset 0 1px 0 var(--edge-top);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+nav.toc a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+.stack{display:flex;flex-direction:column;gap:12px}
+.src{font-family:var(--display);font-size:.86rem;color:var(--muted);line-height:1.7}
+.tag{display:inline-block;font-family:var(--display);font-size:.76rem;font-weight:700;border-radius:5px;padding:0 7px;vertical-align:middle;line-height:1.65}
+.tag.a{background:var(--ok-soft);color:var(--ok)} .tag.b{background:var(--accent-soft);color:var(--accent)} .tag.c{background:var(--warn-soft);color:var(--warn)}
+
+.routes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr));gap:12px}
+.route{background:var(--card);border:1px solid var(--glass-border);border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.route b{font-family:var(--display);font-size:1.08rem}
+.route span{font-size:.95rem;color:var(--muted);line-height:1.6}
+.route .get{font-size:.92rem;font-weight:600;color:var(--ok)} .route .get.no{color:var(--no)}
+
+.scalebox{overflow-x:auto;background:var(--card);border:1px solid var(--glass-border);border-radius:16px;padding:16px}
+.scale{min-width:660px;display:flex;flex-direction:column;gap:14px}
+.track{display:grid;grid-template-columns:130px 1fr;gap:10px;align-items:center}
+.track > b{font-family:var(--display);font-size:.92rem;line-height:1.45}
+.bar{display:grid;border-radius:8px;overflow:hidden;font-family:var(--display);font-size:.84rem;font-weight:600;text-align:center}
+.bar div{padding:9px 4px;line-height:1.4;color:var(--ink)}
+.bar .x{background:var(--no-soft);color:var(--no)} .bar .l1{background:var(--band1)} .bar .l2{background:var(--band2)} .bar .l3{background:var(--band3)} .bar .l4{background:var(--band4);color:var(--accent-ink)} .bar .l5{background:var(--band5);color:var(--accent-ink)}
+:root:not([data-theme="light"]) .bar .l2,:root:not([data-theme="light"]) .bar .l3{color:var(--ink)}
+.ticks{display:grid;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.ticks span{border-left:1px solid var(--line);padding-left:4px}
+
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:0;background:var(--card);border:1px solid var(--glass-border);border-radius:16px;overflow:hidden}
+.step{padding:16px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px;min-width:0}
+.step .when{font-family:var(--mono);font-size:.84rem;font-weight:600;color:var(--accent)}
+.step b{font-family:var(--display);font-size:1.02rem;line-height:1.4}
+.step span{font-size:.93rem;color:var(--muted);line-height:1.6}
+
+table{border-collapse:collapse;width:100%;font-size:1rem;background:transparent}
+.tbl{overflow-x:auto;border:1px solid var(--glass-border);border-radius:16px;background:var(--card)}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line);line-height:1.7}
+th{font-family:var(--display);font-size:.9rem;font-weight:600;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill{display:inline-block;font-family:var(--display);font-size:.84rem;font-weight:700;border-radius:999px;padding:1px 11px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)} .pill.no{background:var(--no-soft);color:var(--no)} .pill.wn{background:var(--warn-soft);color:var(--warn)}
+
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:12px}
+.box{background:var(--card);border:1px solid var(--glass-border);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.box.lose{border-color:var(--no)} .box.keep{border-color:var(--ok)}
+ul{margin:0;padding-left:1.25em;display:flex;flex-direction:column;gap:6px}
+li{max-width:64ch}
+
+.reserve{display:grid;grid-template-columns:7fr 10fr 6fr;border-radius:10px;overflow:hidden;font-family:var(--display);font-size:.9rem;font-weight:600;text-align:center;min-width:480px}
+.reserve div{padding:12px 4px;line-height:1.45}
+.reserve .r1{background:var(--band2)} .reserve .r2{background:var(--band4);color:var(--accent-ink)} .reserve .r3{background:var(--band1)}
+.shares{display:grid;grid-template-columns:2fr 1fr 1fr;border-radius:10px;overflow:hidden;font-family:var(--display);font-weight:600;font-size:.94rem;text-align:center}
+.shares div{padding:14px 4px;line-height:1.45}
+.shares .s1{background:var(--band4);color:var(--accent-ink)} .shares .s2{background:var(--band2)} .shares .s3{background:var(--band1)}
+
+.calc{padding:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:20px}
+.calc form{display:flex;flex-direction:column;gap:14px;min-width:0}
+.calc label{font-family:var(--display);font-size:.95rem;font-weight:500;display:flex;flex-direction:column;gap:5px;line-height:1.5}
+.calc input[type=number]{font-family:var(--mono);font-size:1.08rem;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);width:100%}
+.calc fieldset{border:0;padding:0;margin:0;display:flex;gap:16px;flex-wrap:wrap;font-family:var(--display);font-size:.98rem}
+.calc fieldset legend{font-weight:500;font-size:.95rem;padding:0;margin-bottom:4px}
+.calc fieldset label{flex-direction:row;align-items:center;gap:6px;font-weight:400}
+.out{display:flex;flex-direction:column;gap:10px;min-width:0}
+.out .row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:8px;font-size:1rem;line-height:1.5}
+.out .row b{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.out .row.big b{font-size:1.22rem;color:var(--accent)}
+.small{font-size:.92rem;color:var(--muted);line-height:1.7}
+.btn{font-family:var(--display);font-size:.96rem;font-weight:600;border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:999px;padding:9px 18px;cursor:pointer}
+.btn.ghost{background:var(--card);color:var(--accent);box-shadow:inset 0 1px 0 var(--edge-top)}
+.btn.x{border-color:var(--line);background:var(--field);color:var(--no);padding:4px 12px}
+.avgpanel{padding:18px;display:flex;flex-direction:column;gap:14px}
+.avgpanel .top{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+.avgpanel label{font-family:var(--display);font-size:.95rem;font-weight:500;display:flex;flex-direction:column;gap:4px}
+.avgpanel input[type=number]{font-family:var(--mono);font-size:1rem;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--field);color:var(--ink);width:100%;min-width:0}
+.avgpanel .top input{width:7.5em}
+.avgpanel td,.avgpanel th{padding:7px 8px}
+.avgpanel td.cnt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--muted)}
+.avgres{display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.avgres b{font-family:var(--mono);font-size:1.22rem;color:var(--accent)}
+.warnline{color:var(--warn);font-size:.95rem}
+footer{padding:22px 24px;display:flex;flex-direction:column;gap:10px;font-size:.95rem;color:var(--muted)}
+@media (max-width:520px){ body{font-size:17px} section{padding:20px 16px;border-radius:18px} .cover .intro{padding:18px 16px} }
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){ :root{--paper:rgba(255,255,255,.90)} :root[data-theme="dark"]{--paper:rgba(12,22,16,.92)} }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+
+<header class="cover">
+  <div class="intro">
+    <span class="kicker">ฉบับร่างเพื่อทดลองอ่าน · จัดทำ 8 ต.ค. 2569</span>
+    <h1>คู่มือสิทธิเมื่อออกจากราชการ</h1>
+    <p class="lead">สำหรับกำลังพลกองทัพบกที่กำลังคิดจะลาออก ใกล้เกษียณ หรืออยากรู้ว่าถ้าวันหนึ่งต้องพ้นจากราชการ ตัวเองและครอบครัวจะได้อะไร ต้องทำอะไร และจะเสียอะไร</p>
+    <span class="unofficial">จัดทำโดยกำลังพลเพื่อแบ่งปันความรู้ ไม่ใช่เอกสารทางราชการของกองทัพบก</span>
+    <div class="notice"><strong>อ่านก่อนใช้:</strong> เนื้อหารวบรวมจากตัวบทกฎหมายและหนังสือของกองทัพบกเท่าที่หาได้ ทุกข้อมีที่มากำกับ และมีป้ายบอกระดับความแน่นอน
+      <span class="tag a">ก</span> อ่านจากตัวบทหรือภาพหน้าเอกสารโดยตรง
+      <span class="tag b">ข</span> อ่านด้วยโปรแกรมแปลงภาพเป็นข้อความ ยังไม่ได้เทียบทุกตัวอักษร
+      <span class="tag c">ค</span> มาจากเอกสารรองหรือยังไม่ได้ตรวจฉบับล่าสุด
+      ก่อนตัดสินใจจริง ให้แผนกประวัติและบำเหน็จบำนาญของหน่วยยืนยันทุกครั้ง</div>
+  </div>
+</header>
+
+<div class="topbar">
+<nav class="toc" aria-label="สารบัญ">
+  <a href="#routes">ออกได้ทางไหน</a><a href="#money">ได้เงินอะไร</a><a href="#bw">เบี้ยหวัด</a><a href="#calc">ลองคิดเงิน</a><a href="#steps">ขั้นตอน</a><a href="#family">ครอบครัว</a><a href="#lose">เสียสิทธิเมื่อไร</a><a href="#todo">ต้องเคลียร์อะไร</a><a href="#gaps">ยังไม่แน่</a>
+</nav>
+<button class="theme-toggle" type="button" id="themebtn" aria-label="สลับโหมดมืดและสว่าง">โหมดมืด</button>
+</div>
+
+<section id="routes">
+  <span class="kicker">บทที่ 1</span>
+  <h2>ออกจากราชการได้ทางไหนบ้าง</h2>
+  <p>กฎหมายแบ่งการออกจากราชการตาม "เหตุ" ที่ออก เหตุต่างกัน สิทธิก็ต่างกัน เริ่มจากดูว่าตัวเองอยู่ทางไหน</p>
+  <div class="routes">
+    <div class="route"><b>ลาออกเอง</b><span>ยื่นใบลาออกตามขั้นตอน ผู้บังคับบัญชาอนุญาต</span><span class="get">ได้ตามเวลาราชการและอายุ</span></div>
+    <div class="route"><b>เกษียณอายุ</b><span>อายุครบ 60 ปี พ้นจากราชการเมื่อสิ้นปีงบประมาณนั้น</span><span class="get">เหตุสูงอายุ</span></div>
+    <div class="route"><b>เจ็บป่วยทุพพลภาพ</b><span>แพทย์ที่ทางราชการรับรองเห็นว่ารับราชการในหน้าที่ต่อไม่ได้</span><span class="get">เหตุทุพพลภาพ</span></div>
+    <div class="route"><b>ทางราชการให้ออก</b><span>ยุบเลิกตำแหน่ง หรือสั่งให้ออกโดยไม่มีความผิด</span><span class="get">เหตุทดแทน</span></div>
+    <div class="route"><b>เสียชีวิตระหว่างรับราชการ</b><span>ไม่ได้เกิดจากการประพฤติชั่วอย่างร้ายแรงของตนเอง</span><span class="get">ทายาทได้บำเหน็จตกทอด</span></div>
+    <div class="route"><b>ถูกไล่ออกเพราะความผิด</b><span>หรือเสียชีวิตเพราะประพฤติชั่วอย่างร้ายแรง</span><span class="get no">ไม่ได้บำเหน็จบำนาญ</span></div>
+  </div>
+  <p class="src">ที่มา: พ.ร.บ.บำเหน็จบำนาญข้าราชการ พ.ศ. 2494 มาตรา 8, 9, 11–14, 19 และ พ.ร.บ.กองทุนบำเหน็จบำนาญข้าราชการ พ.ศ. 2539 มาตรา 49–54 <span class="tag a">ก</span></p>
+</section>
+
+<section id="money">
+  <span class="kicker">บทที่ 2</span>
+  <h2>ได้เงินอะไร ขึ้นกับเวลาราชการ</h2>
+  <p>เงินหลักมีสองแบบ <strong>บำเหน็จ</strong> คือเงินก้อนจ่ายครั้งเดียว <strong>บำนาญ</strong> คือเงินรายเดือนไปจนตลอดชีวิต จะได้แบบไหนดูจากเหตุที่ออกและเวลาราชการ</p>
+  <div class="scalebox"><div class="scale">
+    <div class="track"><b>ลาออกเอง<br>อายุไม่ถึง 50</b>
+      <div class="bar" style="grid-template-columns:10fr 15fr 15fr"><div class="x">ไม่ถึง 10 ปี<br>ไม่ได้บำเหน็จบำนาญ</div><div class="l2">10 ปี ไม่ถึง 25 ปี<br>บำเหน็จ (เงินก้อน)</div><div class="l4">25 ปีขึ้นไป<br>บำนาญ หรือเลือกบำเหน็จ</div></div></div>
+    <div class="track"><b>เกษียณ ทุพพลภาพ ทดแทน หรือลาออกเมื่ออายุ 50 ขึ้นไป</b>
+      <div class="bar" style="grid-template-columns:1fr 9fr 30fr"><div class="x">&lt;1</div><div class="l2">1 ปี ไม่ถึง 10 ปี<br>บำเหน็จ</div><div class="l4">10 ปีขึ้นไป<br>บำนาญ หรือเลือกบำเหน็จ</div></div></div>
+    <div class="track"><b>ทหารที่ลาออก<br>เลือกรับเบี้ยหวัด</b>
+      <div class="bar" style="grid-template-columns:1fr 14fr 10fr 5fr 5fr 5fr"><div class="x">&lt;1</div><div class="l1">1 ไม่ถึง 15 ปี<br>15/50</div><div class="l2">15 ไม่ถึง 25<br>25/50</div><div class="l3">30/50</div><div class="l4">35/50</div><div class="l5">40/50</div></div></div>
+    <div class="track"><b>เวลาราชการ (ปี)</b>
+      <div class="ticks" style="grid-template-columns:1fr 9fr 5fr 10fr 5fr 5fr 5fr"><span>0</span><span>1</span><span>10</span><span>15</span><span>25</span><span>30</span><span>35–40</span></div></div>
+  </div></div>
+  <div class="tbl"><table>
+    <tr><th>เงิน</th><th>วิธีคิด</th><th>ที่มา</th></tr>
+    <tr><td>บำเหน็จ</td><td>เงินเดือนเดือนสุดท้าย × จำนวนปีเวลาราชการ</td><td>พ.ร.บ. 2494 ม.32 (1), พ.ร.บ. กบข. ม.62 <span class="tag a">ก</span></td></tr>
+    <tr><td>บำนาญ (ไม่เป็นสมาชิก กบข.)</td><td>เงินเดือนเดือนสุดท้าย ÷ 50 × จำนวนปีเวลาราชการ</td><td>พ.ร.บ. 2494 ม.32 (2) <span class="tag a">ก</span></td></tr>
+    <tr><td>บำนาญ (สมาชิก กบข.)</td><td>เงินเดือนเฉลี่ย 60 เดือนสุดท้าย × เวลาราชการ ÷ 50 แต่ไม่เกินร้อยละ 70 ของเงินเดือนเฉลี่ยนั้น</td><td>พ.ร.บ. กบข. ม.63 <span class="tag a">ก</span></td></tr>
+    <tr><td>เงิน กบข. ของสมาชิก</td><td>เงินสะสม เงินสมทบ และผลประโยชน์ ได้เมื่อออกจากราชการทุกกรณี แม้เวลาราชการไม่ถึง 10 ปี จะคงไว้ให้กองทุนบริหารต่อหรือทยอยรับก็ได้ ถ้ารับบำนาญได้เงินชดเชยด้วย</td><td>พ.ร.บ. กบข. ม.44–46, 48, 67/1 <span class="tag a">ก</span></td></tr>
+    <tr><td>บำเหน็จดำรงชีพ</td><td>ผู้รับบำนาญขอรับเงินก้อนล่วงหน้าได้ ไม่เกิน 15 เท่าของบำนาญรายเดือน (อัตราตามกฎกระทรวง) และจะถูกหักออกจากบำเหน็จตกทอดภายหลัง</td><td>พ.ร.บ. 2494 ม.47/1, 49; พ.ร.บ. กบข. ม.57/1 <span class="tag a">ก</span></td></tr>
+    <tr><td>เงินช่วยค่าครองชีพ (ช.ค.บ.)</td><td>ถ้าเบี้ยหวัดหรือบำนาญรวม ช.ค.บ. แล้วต่ำกว่าเดือนละ 11,000 บาท รัฐเติมส่วนต่างให้ ตั้งแต่ 1 พ.ค. 2567 <strong>ต้องยื่นคำขอเอง</strong>ถ้าไม่เคยได้มาก่อน</td><td>หนังสือ สปช.ทบ. แจกจ่าย นขต.ทบ. 106/67 อ้าง พ.ร.ฎ. ช.ค.บ. ฉบับที่ 17 พ.ศ. 2567 <span class="tag a">ก</span></td></tr>
+  </table></div>
+  <div class="stack">
+    <h3>เวลาราชการนับอย่างไร</h3>
+    <ul>
+      <li>ผู้ที่เคยเป็นทหารกองประจำการ นับได้ตั้งแต่วันขึ้นทะเบียนกองประจำการ <span class="tag a">ก</span> (ม.23)</li>
+      <li>เริ่มนับเมื่ออายุครบ 18 ปีบริบูรณ์ ถ้าเข้ารับราชการก่อนนั้น <span class="tag a">ก</span> (ม.23)</li>
+      <li><strong>ช่วงเป็นนักเรียนทหาร (เช่น นักเรียนนายสิบ):</strong> ถ้าเข้าเป็นนักเรียนทหารระหว่างที่ยังเป็นทหารกองประจำการ นับต่อเนื่องได้ทั้งหมด แต่ถ้า<strong>ปลดจากกองประจำการเป็นกองหนุนแล้ว</strong>จึงเข้าเป็นนักเรียนทหาร ช่วงเป็นนักเรียนจะนับได้ก็ต่อเมื่อมีการแก้ไขทะเบียนกองประจำการให้แสดงสถานะเป็นทหารกองประจำการขณะเรียน ตามอนุมัติ รมว.กห. ถ้าไม่มีการแก้ไข ช่วงนั้นไม่นับ เวลาราชการจะเป็นสองห้วง คือช่วงทหารกองประจำการ กับช่วงตั้งแต่บรรจุเป็นทหารประจำการ <span class="tag a">ก</span> (แจกจ่าย นขต.ทบ. 91/66 ข้อ 2.4, 2.5 และ 44/66) ควรถามแผนกประวัติของหน่วยว่าทะเบียนของตนแก้ไขแล้วหรือยัง</li>
+      <li>เวลาปฏิบัติหน้าที่ตามที่ กห. กำหนดในระหว่างการรบ ปราบจลาจล หรือประกาศสถานการณ์ฉุกเฉิน นับเป็นทวีคูณ เขตประกาศกฎอัยการศึกนับทวีคูณได้ตามที่ ครม. กำหนด ถ้าซ้อนกันหลายอย่างนับทวีคูณได้อย่างเดียว <span class="tag a">ก</span> (ม.24)</li>
+      <li>ลาป่วยหรือลาที่ได้เงินเดือนเต็ม นับเต็ม ได้เงินเดือนไม่เต็มนับตามส่วน ไม่ได้เงินเดือนไม่นับ <span class="tag a">ก</span> (ม.25)</li>
+      <li>ระหว่างเป็นทหารกองหนุนรับเบี้ยหวัด นับเพิ่มให้หนึ่งในสี่ของเวลา <span class="tag a">ก</span> (ม.26)</li>
+      <li><strong>เศษของปี:</strong> ผู้ไม่เป็นสมาชิก กบข. ถ้าเศษถึงครึ่งปีนับเป็นหนึ่งปี (ม.29) ส่วนสมาชิก กบข. ใช้เศษถึงครึ่งปีปัดเป็นหนึ่งปีเฉพาะตอนดูว่ามีสิทธิหรือไม่ แต่ตอนคำนวณจำนวนเงินนับเศษของปีตามจริง โดย 12 เดือนเป็นหนึ่งปี และ 30 วันเป็นหนึ่งเดือน (พ.ร.บ. กบข. ม.66) <span class="tag a">ก</span></li>
+    </ul>
+    <p><strong>เงินเดือนเดือนสุดท้าย</strong> รวมเงินเพิ่มพิเศษรายเดือนสำหรับค่าวิชา เงินเพิ่มการเลื่อนฐานะ เงินประจำตำแหน่งที่ต้องฝ่าอันตรายเป็นปกติ และเงินเพิ่มสำหรับการสู้รบ <span class="tag a">ก</span> (ม.4 ตามหนังสือกรมบัญชีกลาง แจกจ่าย 181/57)</p>
+  </div>
+</section>
+
+<section id="bw">
+  <span class="kicker">บทที่ 3</span>
+  <h2>เบี้ยหวัด สิทธิเฉพาะของทหาร</h2>
+  <p>เบี้ยหวัดคือเงินรายเดือนสำหรับทหารที่ออกจากราชการแล้วยังอยู่ในกองหนุน จ่ายตามข้อบังคับกระทรวงกลาโหมว่าด้วยเงินเบี้ยหวัด พ.ศ. 2495 นายทหารประทวนที่ลาออกด้วยเวลาราชการน้อยมักได้ประโยชน์จากทางนี้มากกว่ารับบำเหน็จก้อนเดียว</p>
+  <div class="two">
+    <div class="box keep"><h3>ใครมีสิทธิ</h3><ul>
+      <li>นายทหารสัญญาบัตรที่มีเวลาราชการไม่น้อยกว่า 1 ปี แล้วออกเป็นนายทหารกองหนุน</li>
+      <li>นายทหารประทวนและพลทหารที่รับราชการกองประจำการครบกำหนด แล้วรับราชการต่อไม่น้อยกว่า 1 ปี และ<strong>ตอนออกยังไม่พ้นกองหนุนชั้นที่ 2</strong></li></ul>
+      <span class="src">ข้อบังคับข้อ 4 <span class="tag a">ก</span></span></div>
+    <div class="box lose"><h3>ใครไม่มีสิทธิ</h3><ul>
+      <li>ผู้ที่ออกโดยรับบำเหน็จหรือบำนาญไปแล้ว</li>
+      <li>ผู้ที่อยู่ต่อเพราะถูกเลื่อนกำหนดปลด หรือเข้ารับการระดมพล ฝึกวิชาทหาร หรือทดลองความพรั่งพร้อม</li>
+      <li>ผู้ที่ออกเพราะความผิด เช่น ทุจริตต่อหน้าที่ ต้องโทษจำคุกโดยคำพิพากษาถึงที่สุด (เว้นลหุโทษหรือประมาท) ขัดคำสั่งจนเสียหายร้ายแรง เปิดเผยความลับ หนีราชการ ประพฤติชั่วอย่างร้ายแรง</li></ul>
+      <span class="src">ข้อบังคับข้อ 5 <span class="tag a">ก</span></span></div>
+  </div>
+  <div class="stack">
+    <h3>กองหนุนชั้นที่ 1–3 คืออะไร</h3>
+    <p>คือช่วงเวลาหลังปลดจากกองประจำการ แบ่งเป็นสามช่วงต่อกัน นาฬิกาเริ่มเดินตั้งแต่วันปลดจากทหารเกณฑ์และเดินไปเองไม่ว่าจะรับราชการต่อหรือไม่ วันปลดดูได้จากทะเบียนกองประจำการ (สด.3) หรือแบบรับรองเวลาราชการตอนเป็นทหาร</p>
+    <div class="scalebox"><div class="reserve">
+      <div class="r1">ชั้นที่ 1<br>7 ปี</div><div class="r2">ชั้นที่ 2 · 10 ปี<br>ลาออกในช่วงนี้ยังมีสิทธิเบี้ยหวัด</div><div class="r3">ชั้นที่ 3<br>6 ปี</div>
+    </div></div>
+    <p class="src">พ.ร.บ.รับราชการทหาร พ.ศ. 2497 มาตรา 9 <span class="tag a">ก</span> ตัวอย่าง: ปลดจากกองประจำการ 1 พ.ค. 2560 จะพ้นชั้นที่ 2 วันที่ 30 เม.ย. 2577</p>
+  </div>
+  <div class="tbl"><table>
+    <tr><th>เวลาราชการ</th><th>เบี้ยหวัดต่อเดือน</th></tr>
+    <tr><td>ไม่ถึง 15 ปี</td><td class="num">15/50 ของเงินเดือนเดือนสุดท้าย</td></tr>
+    <tr><td>15 ปี แต่ไม่ถึง 25 ปี</td><td class="num">25/50</td></tr>
+    <tr><td>25 ปี แต่ไม่ถึง 30 ปี</td><td class="num">30/50</td></tr>
+    <tr><td>30 ปี แต่ไม่ถึง 35 ปี</td><td class="num">35/50</td></tr>
+    <tr><td>35 ปี ถึง 40 ปี</td><td class="num">40/50</td></tr>
+    <tr><td>เกินกว่า 40 ปี</td><td class="num">จำนวนปี/50 แต่ไม่เกินเงินเดือนเดือนสุดท้าย</td></tr>
+  </table></div>
+  <p class="src">ข้อบังคับกระทรวงกลาโหมว่าด้วยเงินเบี้ยหวัด พ.ศ. 2495 ข้อ 6 ฉบับที่กรมการเงินกลาโหมเผยแพร่ (รวมแก้ไขถึงฉบับที่ 7 พ.ศ. 2518) <span class="tag a">ก</span> การนับเวลาราชการและความหมายของเงินเดือนเดือนสุดท้ายใช้ตามกฎหมายบำเหน็จบำนาญข้าราชการ (ข้อ 9)</p>
+  <div class="stack">
+    <h3>เบี้ยหวัดถูกงดเมื่อไร</h3>
+    <ul>
+      <li>นายทหารประทวนและพลทหาร: เมื่อ<strong>ปลดจากกองหนุนชั้นที่ 2</strong> ส่วนนายทหารสัญญาบัตร: เมื่อย้ายหรือปลดจากประเภทนายทหารกองหนุนมีเบี้ยหวัด</li>
+      <li>เข้ารับราชการในตำแหน่งที่มีสิทธิได้รับบำเหน็จบำนาญ</li>
+      <li>กระทำความผิดตามรายการในช่อง "ใครไม่มีสิทธิ"</li>
+      <li>หลีกเลี่ยงหรือบิดพลิ้วจนทางราชการเรียกตัวไม่ได้ในคราวจำเป็น</li>
+      <li>เจ็บไข้หรือพิการ ซึ่งนายแพทย์ของทหาร 2 นายเห็นว่าทำการตามหน้าที่ต่อไปไม่ได้</li>
+    </ul>
+    <p class="src">ข้อบังคับข้อ 8 <span class="tag a">ก</span> คำสั่งให้ออกจากราชการต้องระบุชัดว่าได้รับเบี้ยหวัดหรือไม่ (ข้อ 11)</p>
+  </div>
+  <div class="stack">
+    <h3>หลังจากนั้นเป็นอย่างไร</h3>
+    <ul>
+      <li>เบี้ยหวัดจ่ายถึงวันที่ปลดจากกองหนุนชั้นที่ 2 (ข้อบังคับข้อ 8 (2)) <span class="tag a">ก</span></li>
+      <li>เมื่อจะหมดสิทธิเบี้ยหวัด หน่วยต้องรายงานย้ายประเภทไปรับบำเหน็จหรือบำนาญก่อนครบกำหนดไม่น้อยกว่า 90 วัน และเจ้าตัวต้องไปทำเรื่องขอรับใหม่ <span class="tag a">ก</span> (ระเบียบ ทบ. 918/2558 ข้อ 16.1)</li>
+      <li>ทหารที่ออกจากกองหนุนเบี้ยหวัดถือเป็นเหตุทดแทน ถ้าเวลาราชการรวม 10 ปีขึ้นไปได้บำนาญ <span class="tag a">ก</span> (พ.ร.บ. 2494 ม.11, 15; พ.ร.บ. กบข. ม.51, 53)</li>
+      <li>ระหว่างรับเบี้ยหวัด ถ้ากลับเข้ารับราชการในตำแหน่งที่มีสิทธิบำเหน็จบำนาญ ต้องถูกงดเบี้ยหวัด และต้องแจ้งหน่วยที่เบิกจ่ายภายใน 7 วันนับแต่วันเข้ารับราชการ <span class="tag a">ก</span> (ข้อบังคับข้อ 8 (3), ข้อ 10 ตามหนังสือกระทรวงการคลัง แจกจ่าย 33/57)</li>
+      <li>ทหารกองหนุนยังมีหน้าที่ถูกเรียกพลหรือระดมพล <span class="tag a">ก</span> (พ.ร.บ.รับราชการทหาร ม.36)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="calc">
+  <span class="kicker">บทที่ 4</span>
+  <h2>ลองคิดเงินของตัวเอง</h2>
+  <p>ใส่ตัวเลขของตัวเองแทนตัวอย่างด้านล่าง ผลที่ได้เป็นการแทนค่าในสูตรเท่านั้น ยังไม่รวมเงื่อนไขเฉพาะราย</p>
+  <div class="calc">
+    <form id="f" onsubmit="event.preventDefault()">
+      <label for="sal">เงินเดือนเดือนสุดท้าย รวมเงินเพิ่มที่นับได้ (บาท)<input id="sal" type="number" min="0" step="10" value="20000"></label>
+      <label for="avg">เงินเดือนเฉลี่ย 60 เดือนสุดท้าย (บาท) ใช้กับสมาชิก กบข.<input id="avg" type="number" min="0" step="10" value="18000"></label>
+      <button class="btn ghost" type="button" id="tgl" aria-expanded="false" aria-controls="avgpanel">ไม่รู้ค่าเฉลี่ย กรอกประวัติเงินเดือนให้คิดให้</button>
+      <label for="yr">เวลาราชการรวมทวีคูณ (ปี ใส่ทศนิยมได้ เช่น 12.5)<input id="yr" type="number" min="0" max="60" step="0.01" value="12"></label>
+      <fieldset><legend>สมาชิก กบข.</legend>
+        <label for="gy"><input id="gy" type="radio" name="g" value="1" checked>เป็น</label>
+        <label for="gn"><input id="gn" type="radio" name="g" value="0">ไม่เป็น</label></fieldset>
+      <span class="small">ตัวเลขที่ใส่ไว้เป็นตัวอย่าง ไม่ใช่ข้อมูลของใคร เครื่องคิดปัดเศษเวลาราชการตามกฎหมาย คือเศษถึงครึ่งปีนับเป็นหนึ่งปีเมื่อดูอัตราเบี้ยหวัดและเมื่อคิดเงินของผู้ไม่เป็นสมาชิก กบข.</span>
+    </form>
+    <div class="out" aria-live="polite">
+      <div class="row"><span>บำเหน็จ (เงินก้อน)</span><b id="o1">–</b></div>
+      <div class="row"><span>บำนาญตามสูตร ต่อเดือน</span><b id="o2">–</b></div>
+      <div class="row"><span>เบี้ยหวัดตามอัตรา <span id="rate"></span> ต่อเดือน</span><b id="o3">–</b></div>
+      <div class="row"><span>ช.ค.บ. ที่เติมให้เบี้ยหวัด</span><b id="o4">–</b></div>
+      <div class="row big"><span>เบี้ยหวัดรวม ช.ค.บ. ต่อเดือน</span><b id="o5">–</b></div>
+      <div class="row big"><span>บำนาญรวม ช.ค.บ. ต่อเดือน</span><b id="o6">–</b></div>
+      <span class="small">จะได้บำเหน็จ บำนาญ หรือเบี้ยหวัดจริงหรือไม่ ต้องดูเงื่อนไขในบทที่ 2 และ 3 ก่อน เกณฑ์ ช.ค.บ. 11,000 บาทเป็นของปี 2567 รัฐบาลปรับได้</span>
+    </div>
+  </div>
+
+  <div class="avgpanel" id="avgpanel" hidden>
+    <h3>ตารางคิดเงินเดือนเฉลี่ย 60 เดือนสุดท้าย</h3>
+    <p class="small">กรอกทุกครั้งที่เงินเดือนเปลี่ยน ทั้งการเลื่อนชั้นรอบ 1 เม.ย. และ 1 ต.ค. การปรับระดับ และการปรับบัญชีเงินเดือน โดยดูจากคำสั่งเลื่อนชั้นเงินเดือน สลิปเงินเดือน หรือหน้าเงินเดือนในสมุดประวัติ ใส่แค่เดือนที่เริ่มใช้อัตราใหม่ ตารางจะนับให้เองว่าแต่ละอัตราใช้กี่เดือน ถ้าปรับกลางเดือน ให้ใส่เดือนถัดไป</p>
+    <div class="top">
+      <label for="lm">เดือนสุดท้ายที่รับเงินเดือน (1–12)<input id="lm" type="number" min="1" max="12" step="1" value="10"></label>
+      <label for="ly">ปี พ.ศ.<input id="ly" type="number" min="2500" max="2700" step="1" value="2569"></label>
+      <button class="btn ghost" type="button" id="addrow">เพิ่มแถว (อีก 6 เดือนถัดไป)</button>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>เริ่มใช้เดือน (1–12)</th><th>ปี พ.ศ.</th><th>เงินเดือน (บาท)</th><th>นับได้</th><th><span class="small">ลบ</span></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table></div>
+    <div class="avgres">
+      <span>ช่วงที่ใช้คิด <span id="win">–</span> · ครอบคลุม <span id="cov">–</span> จาก 60 เดือน · เฉลี่ย <b id="avgout">–</b></span>
+      <button class="btn" type="button" id="useavg">นำค่านี้ไปใช้ในเครื่องคิดเงิน</button>
+    </div>
+    <span class="warnline" id="avgwarn" hidden></span>
+    <span class="small">แถวที่ใส่ไว้เป็นตัวเลขสมมติ ลบแล้วใส่ของตัวเองแทน ผลที่ได้เป็นค่าประมาณระดับเดือน ค่าจริงกรมบัญชีกลางเป็นผู้คำนวณตอนยื่นแบบ 5300 ซึ่งหน้า 3 ของแบบเป็นตารางแบบเดียวกันนี้ คือเงินเดือนแต่ละอัตรา ตั้งแต่วันใดถึงวันใด รวมกี่เดือน <span class="tag b">ข</span> (แจกจ่าย 33/57) กฎหมายกำหนดเพียงว่าให้ใช้อัตราเงินเดือนเฉลี่ยหกสิบเดือนสุดท้าย (พ.ร.บ. กบข. ม.63) <span class="tag a">ก</span></span>
+    <div class="stack">
+      <h3>ถ้ายังคิดเองไม่ได้ มีทางอื่น</h3>
+      <ul>
+        <li><strong>ขอให้เจ้าหน้าที่คิดให้</strong> แผนกประวัติและบำเหน็จบำนาญหรือเจ้าหน้าที่การเงินของหน่วยมีประวัติเงินเดือนครบ และช่องเงินเดือนเฉลี่ยในแบบ 5300 เป็นช่องที่เจ้าหน้าที่กรมบัญชีกลางกรอก ไม่ใช่ผู้ขอ <span class="tag b">ข</span></li>
+        <li><strong>ประมาณอย่างหยาบ</strong> ถ้าเงินเดือนขึ้นสม่ำเสมอ ค่าเฉลี่ย 60 เดือนจะใกล้กับเงินเดือนที่ได้รับเมื่อราว 2 ปีครึ่งก่อนออก วิธีนี้เป็นข้อสังเกตของผู้จัดทำ ใช้ดูคร่าว ๆ เท่านั้น <span class="tag c">ค</span></li>
+        <li><strong>ผู้ที่ไม่เป็นสมาชิก กบข.</strong> ไม่ต้องใช้ค่าเฉลี่ย ใช้เงินเดือนเดือนสุดท้ายอย่างเดียว</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="steps">
+  <span class="kicker">บทที่ 5</span>
+  <h2>ขั้นตอนและกำหนดเวลา</h2>
+  <h3>ลาออก</h3>
+  <div class="steps">
+    <div class="step"><span class="when">ก่อนวันลาออก 3 เดือน</span><b>ยื่นใบลาออกที่หน่วยต้นสังกัด</b><span>ห้วงขอลาออกคือ ต.ค. ถึง มิ.ย. ของทุกปีงบประมาณ</span></div>
+    <div class="step"><span class="when">ภายใน 1 เดือน</span><b>หน่วยตรวจและรวบรวมเอกสาร</b><span>รวมหนี้สิน สัญญาผูกพัน และสิทธิเบี้ยหวัด บำเหน็จ บำนาญ</span></div>
+    <div class="step"><span class="when">ก่อนวันลาออก 2 เดือน</span><b>เรื่องถึง สบ.ทบ.</b><span>ช้ากว่านี้หรือเอกสารไม่ครบ จะถูกส่งคืนให้กำหนดวันลาออกใหม่</span></div>
+    <div class="step"><span class="when">ก่อนวันลาออก</span><b>อนุมัติและออกคำสั่ง</b><span>นายทหารประทวน: จก.สบ.ทบ. อนุมัติตัวบุคคล หน่วยระดับกองพลออกคำสั่ง</span></div>
+    <div class="step"><span class="when">ภายใน 10 วันทำการ</span><b>ลงชื่อในแบบขอรับเงิน</b><span>นับจากรับทราบคำสั่งให้ออก ที่หน่วยต้นสังกัด</span></div>
+    <div class="step"><span class="when">10 + 20 วันทำการ</span><b>หน่วยตรวจหลักฐาน แล้วขอถือจ่าย</b><span>ไปยังคลังเขตหรือกรมบัญชีกลาง</span></div>
+  </div>
+  <p class="src">หนังสือแจกจ่าย นขต.ทบ. 131/65 ข้อ 2.1, 2.4.1.1 <span class="tag a">ก</span> · 120/56 <span class="tag b">ข</span> · ระเบียบ ทบ. 918/2558 ข้อ 11 <span class="tag a">ก</span> · การให้ลาออกอยู่ในดุลพินิจของ ผบ.ทบ. โดยดูหนี้สิน ระยะเวลาชดใช้ และข้อผูกพันตามสัญญา</p>
+  <h3>เกษียณอายุ</h3>
+  <div class="steps">
+    <div class="step"><span class="when">ก่อนเกษียณ 8 เดือนขึ้นไป</span><b>หน่วยรายงานเพื่อออกคำสั่งให้ออกเพราะเกษียณ</b><span>เพื่อให้มีเวลาเตรียมเอกสาร</span></div>
+    <div class="step"><span class="when">ภายใน 10 วันทำการ</span><b>ลงชื่อในแบบขอรับเงิน</b><span>นับจากรับทราบคำสั่ง</span></div>
+    <div class="step"><span class="when">ก่อนเกษียณ 5 เดือนขึ้นไป</span><b>ขอถือจ่ายไปยังคลังเขตหรือกรมบัญชีกลาง</b><span>เพื่อให้ได้เงินต่อเนื่องหลังเกษียณ</span></div>
+  </div>
+  <p class="src">ระเบียบ ทบ. 918/2558 ข้อ 12 <span class="tag a">ก</span> (ตัวเลข 8 เดือนยังไม่ได้เทียบภาพ <span class="tag b">ข</span>)</p>
+  <h3>เอกสารที่ต้องเตรียม (กรณีลาออก 20 รายการ)</h3>
+  <div class="two">
+    <div class="box"><b>มีอยู่กับตัวหรือหาเองได้</b><ul>
+      <li>สำเนาคำสั่งบรรจุเป็นนักเรียนทหาร (ถ้ามี) และคำสั่งบรรจุเข้ารับราชการ</li><li>หลักฐานการเปลี่ยนชื่อ ชื่อสกุล (ถ้ามี)</li><li>สำเนาทะเบียนบ้าน</li><li>สำเนาหน้าสมุดบัญชีธนาคาร (ออมทรัพย์)</li><li>สำเนาทะเบียนกองประจำการ สด.3</li><li>หนังสือรับรองเวลาราชการทวีคูณ</li><li>สำเนาคำสั่งเงินเดือนครั้งสุดท้าย</li></ul></div>
+    <div class="box"><b>หน่วยออกให้หรือทำตอนยื่น</b><ul>
+      <li>ประวัติรับราชการ</li><li>สำเนาคำสั่งให้ออกจากราชการ</li><li>แบบ 5300 ของกระทรวงการคลัง และแบบ บ. (ทบ.101-041)</li><li>หนังสือรับรองการอยู่ปฏิบัติราชการ</li><li>หนังสือรับรองหนี้สินของทางราชการ</li><li>หนังสือรับรองการเป็นหรือไม่เป็นสมาชิก กบข.</li><li>แบบ สรจ.1 (ลดหย่อนภาษี) และ สรจ.3 (บำเหน็จดำรงชีพ)</li><li>หนังสือรับรองเงินเพิ่มค่าฝ่าอันตราย คำสั่งพักราชการ (ถ้ามี)</li></ul></div>
+  </div>
+  <p class="src">ระเบียบ ทบ. 918/2558 ผนวก ค ข้อ 1 <span class="tag a">ก</span> ใช้อย่างละ 2 ฉบับ ยกเว้นประวัติรับราชการ 1 เล่ม ผู้เคยเป็นทหารกองประจำการแนบแบบรับรองเวลาราชการตอนเป็นทหารและแบบ "ส" ข.7 ด้วย</p>
+</section>
+
+<section id="family">
+  <span class="kicker">บทที่ 6</span>
+  <h2>ครอบครัวมีสิทธิอะไร</h2>
+  <div class="stack">
+    <h3>รักษาพยาบาล</h3>
+    <p>ผู้ที่ยังมีสิทธิหลังออกจากราชการคือ ผู้รับบำนาญปกติ ผู้รับบำนาญพิเศษเพราะเหตุทุพพลภาพ และ<strong>ทหารกองหนุนมีเบี้ยหวัด</strong> สิทธินี้ครอบคลุมตนเองและบุคคลในครอบครัว</p>
+    <div class="tbl"><table>
+      <tr><th>ใคร</th><th>เงื่อนไข</th></tr>
+      <tr><td>บุตร</td><td>ชอบด้วยกฎหมาย ยังไม่บรรลุนิติภาวะ (หรือไร้ความสามารถในอุปการะ) ไม่รวมบุตรบุญธรรม ได้เฉพาะคนที่ 1 ถึง 3</td></tr>
+      <tr><td>คู่สมรส</td><td>ต้องจดทะเบียนสมรส</td></tr>
+      <tr><td>บิดา มารดา</td><td>ชอบด้วยกฎหมาย</td></tr>
+    </table></div>
+    <p class="src">พ.ร.ฎ.เงินสวัสดิการเกี่ยวกับการรักษาพยาบาล พ.ศ. 2553 มาตรา 4–6, 10 <span class="tag a">ก</span> ยังไม่ได้ตรวจฉบับแก้ไขเพิ่มเติม · ถ้ามีสิทธิจากที่อื่นด้วย เช่น ประกันสังคม ต้องเลือกใช้ทางใดทางหนึ่ง</p>
+  </div>
+  <div class="stack">
+    <h3>การศึกษาของบุตร</h3>
+    <p>ผู้มีสิทธิเบิกเงินสวัสดิการเกี่ยวกับการศึกษาของบุตรหลังออกจากราชการคือ ผู้รับบำนาญปกติ ผู้รับบำนาญพิเศษเหตุทุพพลภาพ และ<strong>ทหารกองหนุนมีเบี้ยหวัด</strong> กลุ่มเดียวกับสิทธิรักษาพยาบาล ผู้ที่เลือกรับบำเหน็จก้อนเดียวไม่อยู่ในรายการนี้</p>
+    <ul>
+      <li>เบิกได้เฉพาะบุตรคนที่ 1 ถึง 3 นับตามลำดับการเกิด ไม่ว่าเกิดจากการสมรสครั้งใด</li>
+      <li>บุตรต้องชอบด้วยกฎหมาย อายุไม่เกิน 25 ปีในวันที่ 1 พ.ค. ของทุกปี ไม่รวมบุตรบุญธรรม</li>
+      <li>ประเภทและอัตราที่เบิกได้เป็นไปตามที่กระทรวงการคลังกำหนด</li>
+    </ul>
+    <p class="src">พ.ร.ฎ.เงินสวัสดิการเกี่ยวกับการศึกษาของบุตร พ.ศ. 2523 มาตรา 4, 6, 7 <span class="tag a">ก</span> เป็นฉบับปี 2523 ยังไม่ได้ตรวจว่าถูกแก้ไขหรือยกเลิกโดยฉบับใหม่ <span class="tag c">ค</span></p>
+  </div>
+  <div class="stack">
+    <h3>ถ้าเสียชีวิต ทายาทได้บำเหน็จตกทอด</h3>
+    <div class="tbl"><table>
+      <tr><th>เสียชีวิตตอนไหน</th><th>ทายาทได้</th></tr>
+      <tr><td>ระหว่างรับราชการ หรือระหว่างเป็นทหารกองหนุนมีเบี้ยหวัด</td><td>เงินเดือนเดือนสุดท้าย × เวลาราชการ</td></tr>
+      <tr><td>ระหว่างรับบำนาญ</td><td>30 เท่าของบำนาญรายเดือน (กฎหมายบำเหน็จบำนาญ พ.ศ. 2494 ให้รวม ช.ค.บ. ด้วย) หักบำเหน็จดำรงชีพที่รับไปแล้ว</td></tr>
+    </table></div>
+    <p>แบ่งให้ทายาทตามส่วน ถ้ากลุ่มใดไม่มี ให้แบ่งในกลุ่มที่เหลือ ถ้าไม่มีทายาทเลย จ่ายให้บุคคลที่ผู้ตายทำหนังสือแสดงเจตนาไว้กับส่วนราชการ ถ้าไม่มีอีก สิทธิเป็นอันยุติ</p>
+    <div class="scalebox"><div class="shares" style="min-width:420px">
+      <div class="s1">บุตร 2 ส่วน<br>(3 ส่วน ถ้ามีบุตร 3 คนขึ้นไป)</div><div class="s2">คู่สมรส<br>1 ส่วน</div><div class="s3">บิดามารดา<br>1 ส่วน</div>
+    </div></div>
+    <p class="src">พ.ร.บ. 2494 มาตรา 48, 49; พ.ร.บ. กบข. มาตรา 58, 64, 65 <span class="tag a">ก</span> ต้องไม่ได้เสียชีวิตเพราะการประพฤติชั่วอย่างร้ายแรงของตนเอง</p>
+    <ul>
+      <li>ทายาทต้องไปแสดงตนและลงชื่อในแบบขอรับเงิน พร้อมมรณบัตร ทะเบียนบ้าน และเอกสารแสดงการเป็นทายาท เช่น ทะเบียนสมรส ทะเบียนรับรองบุตร <span class="tag b">ข</span></li>
+      <li>อำเภอหรือเขตสอบสวนการเป็นทายาทโดยมีพยานอย่างน้อย 2 คน <span class="tag b">ข</span></li>
+      <li>ถ้าทายาทบางคนเอกสารไม่ครบ หน่วยขอถือจ่ายให้คนที่ครบก่อน แล้วกันส่วนของคนที่เหลือไว้ <span class="tag b">ข</span> (ระเบียบ ทบ. 918/2558 ข้อ 14)</li>
+      <li>ถ้าบาดเจ็บจนทุพพลภาพหรือเสียชีวิตเพราะเหตุปฏิบัติราชการ มีบำนาญพิเศษเพิ่มจากบำนาญปกติ <span class="tag a">ก</span> (พ.ร.บ. 2494 ม.37)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="lose">
+  <span class="kicker">บทที่ 7</span>
+  <h2>กรณีไหนได้ กรณีไหนเสีย</h2>
+  <div class="tbl"><table>
+    <tr><th>สถานการณ์</th><th>ผล</th><th>ที่มา</th></tr>
+    <tr><td>ถูกไล่ออกจากราชการเพราะมีความผิด</td><td><span class="pill no">เสีย</span> ไม่ได้บำเหน็จบำนาญ สมาชิก กบข. ไม่ได้เงินประเดิม เงินชดเชย</td><td>พ.ร.บ. 2494 ม.8; กบข. ม.54 <span class="tag a">ก</span></td></tr>
+    <tr><td>เวลาราชการไม่ครบ 1 ปี</td><td><span class="pill no">เสีย</span> ไม่ได้บำเหน็จบำนาญปกติ</td><td>พ.ร.บ. 2494 ม.8 (5) <span class="tag a">ก</span></td></tr>
+    <tr><td>ลาออกเอง อายุไม่ถึง 50 เวลาราชการไม่ถึง 10 ปี</td><td><span class="pill no">เสีย</span> ไม่ได้บำเหน็จบำนาญ (ทหารดูสิทธิเบี้ยหวัด)</td><td>พ.ร.บ. 2494 ม.17; กบข. ม.47 <span class="tag a">ก</span></td></tr>
+    <tr><td>ลาออกเอง เวลาราชการ 10 ปีแต่ไม่ถึง 25 ปี</td><td><span class="pill wn">ต้องเลือก</span> บำเหน็จก้อนเดียว หรือถ้าเป็นทหารที่เข้าเงื่อนไข เลือกเบี้ยหวัดแทน</td><td>ม.17; ข้อบังคับเบี้ยหวัดข้อ 4, 5 <span class="tag a">ก</span></td></tr>
+    <tr><td>ทหารเลือกรับบำเหน็จตอนลาออก</td><td><span class="pill no">เสีย</span> เบี้ยหวัด และไม่อยู่ในนิยามผู้มีสิทธิรักษาพยาบาล</td><td>ข้อบังคับข้อ 5 (1); พ.ร.ฎ. รักษาพยาบาล ม.4 <span class="tag a">ก</span></td></tr>
+    <tr><td>นายทหารประทวนลาออกหลังพ้นกองหนุนชั้นที่ 2</td><td><span class="pill no">เสีย</span> ไม่เข้าเงื่อนไขเบี้ยหวัด</td><td>ข้อบังคับข้อ 4 (3) <span class="tag a">ก</span></td></tr>
+    <tr><td>รับเบี้ยหวัดอยู่ แล้วหลบเลี่ยงการเรียกพล หรือทำความผิดตามข้อ 5 (3)</td><td><span class="pill no">งด</span> เบี้ยหวัด</td><td>ข้อบังคับข้อ 8 (4), (5) <span class="tag a">ก</span></td></tr>
+    <tr><td>ลาออกเมื่อเวลาราชการครบ 25 ปี หรืออายุครบ 50 ปี</td><td><span class="pill ok">ได้</span> บำเหน็จบำนาญตามเหตุรับราชการนานหรือเหตุสูงอายุ</td><td>พ.ร.บ. 2494 ม.13, 14; กบข. ม.48, 52 <span class="tag a">ก</span></td></tr>
+    <tr><td>รับเบี้ยหวัดแล้วกลับเข้ารับราชการ</td><td><span class="pill no">งด</span> เบี้ยหวัด และถ้าไม่แจ้งภายใน 7 วันจะถูกเรียกเงินคืน</td><td>แจกจ่าย 33/57 <span class="tag a">ก</span></td></tr>
+    <tr><td>ไม่ยื่นขอ ช.ค.บ.</td><td><span class="pill no">ไม่ได้</span> ส่วนเติมถึง 11,000 บาท จนกว่าจะยื่น</td><td>แจกจ่าย 106/67 <span class="tag a">ก</span></td></tr>
+    <tr><td>ปล่อยไว้ไม่ขอรับบำเหน็จบำนาญ</td><td><span class="pill no">หมดอายุ</span> สิทธิขอมีอายุความ 3 ปี และยื่นช้าเกิน 1 ปีจะถูกสอบสวนสาเหตุ</td><td>พ.ร.บ. 2494 ม.10 <span class="tag a">ก</span>; ระเบียบ ทบ. 918/2558 ข้อ 11.3 <span class="tag a">ก</span></td></tr>
+    <tr><td>เสียชีวิตเพราะประพฤติชั่วอย่างร้ายแรงของตนเอง</td><td><span class="pill no">เสีย</span> ทายาทไม่ได้บำเหน็จตกทอด</td><td>พ.ร.บ. 2494 ม.48; กบข. ม.54 <span class="tag a">ก</span></td></tr>
+  </table></div>
+</section>
+
+<section id="todo">
+  <span class="kicker">บทที่ 8</span>
+  <h2>เรื่องที่ต้องเคลียร์ก่อนและหลังออก</h2>
+  <div class="two">
+    <div class="box"><h3>หนี้สิน</h3><p>หน่วยตรวจหนี้ของผู้จะลาออก ถ้ามีหนี้โครงการสินเชื่อของทางราชการค้างอยู่ ต้องชำระหรือทำหนังสือยินยอมให้หักจากเบี้ยหวัด บำเหน็จ บำนาญ</p><span class="src">แจกจ่าย 46/58 <span class="tag c">ค</span></span></div>
+    <div class="box"><h3>เงินออมทรัพย์ อทบ.</h3><p>ออกจากประจำการแล้วระงับการฝาก ต้องยื่นขอถอนที่หน่วยที่รับเงินเดือนครั้งสุดท้าย ถ้ามีหนี้เงินกู้ อทบ. จะถูกหักจากเงินฝากก่อน ถ้าไม่ยื่นภายใน 60 วัน กรมสวัสดิการทหารบกถอนไปชำระหนี้ได้ และดอกเบี้ยเงินฝากหยุดคิดเมื่อระงับการฝากครบ 1 ปี</p><span class="src">ระเบียบ ทบ. 7/2548 ข้อ 8 <span class="tag b">ข</span> ยังไม่ได้ตรวจว่ามีฉบับใหม่กว่า</span></div>
+    <div class="box"><h3>ฌาปนกิจสงเคราะห์ ทบ.</h3><p>สมาชิกภาพสิ้นสุดเมื่อถึงแก่กรรม ลาออกจากสมาชิก หรือถูกถอนชื่อเพราะขาดส่งเงินสงเคราะห์เกิน 90 วัน การออกจากราชการไม่อยู่ในรายการนี้ แต่ต้องส่งเงินเอง ผู้ที่ขาดสมาชิกภาพขอคืนสภาพได้ถ้าอายุไม่เกิน 60 ปีและขาดไม่เกิน 2 ปี</p><span class="src">ระเบียบ ทบ. 10/2538 ข้อ 14–15 <span class="tag b">ข</span> มีฉบับแก้ไขภายหลังที่ยังไม่ได้อ่าน</span></div>
+    <div class="box"><h3>บ้านพัก</h3><p>หมดสิทธิเมื่อเกษียณ ถึงแก่กรรม หรือออกจากราชการไม่ว่ากรณีใด ลาออกต้องย้ายออกภายใน 180 วันนับจากรับทราบคำสั่ง เกษียณต้องย้ายออกภายใน 30 ก.ย. ของปีที่เกษียณ ถ้าผู้มีสิทธิถึงแก่กรรม ครอบครัวอยู่ต่อได้ไม่เกิน 365 วัน</p><span class="src">ระเบียบ ทบ. ว่าด้วยการเข้าพักอาศัยในอาคารบ้านพักฯ พ.ศ. 2564 (ที่ 6/2564) ข้อ 14, 15 <span class="tag a">ก</span></span></div>
+    <div class="box"><h3>บัตรประจำตัวผู้รับเงิน</h3><p>ผู้รับเบี้ยหวัดหรือบำนาญที่ขอรับเงินทางกรมการเงินกลาโหมต้องมีบัตรนี้ไว้แสดงตอนรับเงินและติดต่อราชการ ขอครั้งแรกที่กองเบี้ยหวัดบำเหน็จบำนาญ ใช้หนังสือสั่งจ่ายของกรมบัญชีกลางกับรูปถ่าย 1 นิ้ว 1 รูป และต้องไปรับบัตรเอง บัตรผู้รับบำนาญใช้ได้ตลอดชีพ บัตรผู้รับเบี้ยหวัดใช้ได้ถึงวันครบกำหนดย้ายประเภท</p><span class="src">ระเบียบกรมการเงินกลาโหมว่าด้วยบัตรประจำตัวผู้รับเงินเบี้ยหวัด บำนาญ พ.ศ. 2553 ข้อ 6–9 <span class="tag b">ข</span></span></div>
+    <div class="box"><h3>รับ–ส่งหน้าที่</h3><p>ผู้ถูกสั่งให้ออกยังมีอำนาจหน้าที่และรับผิดชอบในตำแหน่งเดิมจนกว่าจะส่งมอบให้ผู้มารับ</p><span class="src">ระเบียบ ทบ. 7/2540 ข้อ 5 <span class="tag c">ค</span></span></div>
+    <div class="box"><h3>เงินกู้บ้าน ธอส.–กบข.</h3><p>พ้นสภาพข้าราชการเพราะลาออก ยังคงสิทธิอัตราดอกเบี้ยตามโครงการต่อไปได้</p><span class="src">แจกจ่าย 103/57, 122/60 <span class="tag c">ค</span></span></div>
+  </div>
+</section>
+
+<section id="gaps">
+  <span class="kicker">บทที่ 9</span>
+  <h2>สิ่งที่คู่มือนี้ยังตอบไม่ได้</h2>
+  <ul>
+    <li>ข้อบังคับเบี้ยหวัดที่อ่านเป็นฉบับรวมแก้ไขถึง พ.ศ. 2518 ยังไม่ได้ตรวจว่ามีการแก้ไขหลังจากนั้นหรือไม่</li>
+    <li>สมาชิก กบข. ได้นับเวลาหนึ่งในสี่ช่วงรับเบี้ยหวัดหรือไม่ พ.ร.บ. กบข. ม.68 ให้นำกฎหมายบำเหน็จบำนาญมาใช้โดยอนุโลมเท่าที่ไม่ขัดกัน และแบบ 5300 มีช่อง "เวลาระหว่างรับเบี้ยหวัด นับ 1 ใน 4" แต่ยังไม่พบหนังสือที่ตอบตรง ๆ สำหรับสมาชิก กบข.</li>
+    <li>เบี้ยหวัดของสมาชิก กบข. ใช้ฐานเงินเดือนแบบใด</li>
+    <li>รายละเอียดการคิดเงินเดือนเฉลี่ย 60 เดือนในเดือนที่ได้เงินเดือนไม่เต็ม</li>
+    <li>หนังสืออนุมัติ รมว.กห. ลง 20 มี.ค. 2566 เรื่องการแก้ไขทะเบียนกองประจำการของนักเรียนทหาร ยังไม่ได้อ่านฉบับเต็มว่าใครเข้าเงื่อนไข</li>
+    <li>พ.ร.ฎ. ช.ค.บ. และ พ.ร.ฎ. รักษาพยาบาล ฉบับแก้ไขล่าสุด</li>
+    <li>กรณีปลดออก ให้ออก และโครงการเกษียณอายุก่อนกำหนด ยังไม่ได้รวบรวม</li>
+    <li>พ.ร.ฎ. การศึกษาของบุตรที่อ่านเป็นฉบับ พ.ศ. 2523 ยังไม่ได้ตรวจฉบับที่ใช้อยู่ปัจจุบันและอัตราที่เบิกได้</li>
+    <li>เครื่องแบบ ยศ และภาษีของเงินที่ได้รับ</li>
+    <li>ระเบียบฌาปนกิจและ อทบ. อาจมีฉบับใหม่กว่าที่อ่าน</li>
+  </ul>
+</section>
+
+<footer>
+  <b style="font-family:var(--display);color:var(--ink)">แหล่งที่มา</b>
+  <span>พ.ร.บ.บำเหน็จบำนาญข้าราชการ พ.ศ. 2494 และ พ.ร.บ.กองทุนบำเหน็จบำนาญข้าราชการ พ.ศ. 2539 (ฉบับสำนักงานคณะกรรมการกฤษฎีกา) · พ.ร.บ.รับราชการทหาร พ.ศ. 2497 (ฉบับกรมการปกครอง) · พ.ร.ฎ.เงินสวัสดิการเกี่ยวกับการรักษาพยาบาล พ.ศ. 2553 (ราชกิจจานุเบกษา) · พ.ร.ฎ.เงินสวัสดิการเกี่ยวกับการศึกษาของบุตร พ.ศ. 2523 · ระเบียบกรมการเงินกลาโหมว่าด้วยบัตรประจำตัวผู้รับเงินเบี้ยหวัด บำนาญ พ.ศ. 2553 · ข้อบังคับกระทรวงกลาโหมว่าด้วยเงินเบี้ยหวัด พ.ศ. 2495 และที่แก้ไขเพิ่มเติม (กรมการเงินกลาโหม) · บันทึกสำนักงานคณะกรรมการกฤษฎีกา เรื่องเสร็จที่ 774/2537 · ระเบียบ ทบ. 918/2558, 5/2556, 6/2564, 7/2548, 10/2538, 7/2540 · หนังสือแจกจ่าย นขต.ทบ. 106/67, 131/65, 181/57, 33/57, 120/56, 46/58, 44/66, 91/66</span>
+  <span>ฉบับร่างที่ 7 ตรวจเนื้อหากับตัวบทแล้ว 8 ต.ค. 2569 แต่ยังไม่ผ่านการตรวจของหน่วยงานที่รับผิดชอบ</span>
+</footer>
+</div>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var fmt=function(n){return isFinite(n)?Math.round(n).toLocaleString('th-TH')+' บาท':'–'};
+  function rate(y){ if(y<1)return [0,'ไม่มีสิทธิ']; if(y<15)return [15/50,'15/50']; if(y<25)return [25/50,'25/50']; if(y<30)return [30/50,'30/50']; if(y<35)return [35/50,'35/50']; if(y<=40)return [40/50,'40/50']; return [Math.min(y/50,1),'ปี/50']; }
+  function run(){
+    var s=parseFloat($('sal').value)||0, a=parseFloat($('avg').value)||0, y=parseFloat($('yr').value)||0, g=$('gy').checked;
+    var yr=Math.floor(y+0.5); /* เศษถึงครึ่งปีนับเป็นหนึ่งปี */
+    var lump=g?s*y:s*yr, pen=g?Math.min(a*y/50,a*0.7):s*yr/50, r=rate(yr), bw=s*r[0], floor=11000;
+    $('o1').textContent=fmt(lump); $('o2').textContent=fmt(pen); $('rate').textContent='('+r[1]+')';
+    $('o3').textContent=r[0]?fmt(bw):'–'; $('o4').textContent=r[0]?fmt(Math.max(0,floor-bw)):'–';
+    $('o5').textContent=r[0]?fmt(Math.max(bw,floor)):'–'; $('o6').textContent=fmt(Math.max(pen,floor));
+    $('avg').disabled=!g;
+  }
+  ['sal','avg','yr','gy','gn'].forEach(function(i){$(i).addEventListener('input',run);$(i).addEventListener('change',run)});
+  run();
+
+  /* ตารางเงินเดือนเฉลี่ย 60 เดือน */
+  var MON=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  var rows=[[4,2564,11500],[10,2564,11860],[4,2565,12220],[10,2565,12600],[4,2566,12980],[10,2566,13360],[4,2567,13760],[10,2567,14160],[4,2568,14580],[10,2568,15000],[4,2569,15440],[10,2569,15880]]
+    .map(function(r){return {m:r[0],y:r[1],s:r[2]}});
+  var result={avg:NaN,last:NaN};
+  var idx=function(m,y){return y*12+(m-1)};
+  var lab=function(k){return MON[((k%12)+12)%12]+' '+Math.floor(k/12)};
+  function calcAvg(){
+    var last=idx(parseInt($('lm').value)||1,parseInt($('ly').value)||0), first=last-59;
+    var sorted=rows.map(function(r,i){return {k:idx(r.m,r.y),s:r.s,i:i}}).filter(function(r){return r.s>0&&isFinite(r.k)}).sort(function(a,b){return a.k-b.k});
+    var counts=rows.map(function(){return 0}), sum=0, cov=0, lastSal=NaN;
+    for(var k=first;k<=last;k++){
+      var hit=null; for(var j=0;j<sorted.length;j++){ if(sorted[j].k<=k) hit=sorted[j]; else break; }
+      if(hit){ sum+=hit.s; cov++; counts[hit.i]++; if(k===last) lastSal=hit.s; }
+    }
+    result={avg:cov?sum/cov:NaN,last:lastSal};
+    rows.forEach(function(r,i){var c=$('c'+i); if(c) c.textContent=counts[i]?counts[i]+' เดือน':'นอกช่วง'});
+    $('win').textContent=lab(first)+' ถึง '+lab(last);
+    $('cov').textContent=cov;
+    $('avgout').textContent=cov?Math.round(result.avg).toLocaleString('th-TH')+' บาท':'–';
+    var w=$('avgwarn');
+    if(cov<60){ w.hidden=false; w.textContent='ยังขาดข้อมูลเงินเดือนช่วงต้นอีก '+(60-cov)+' เดือน ค่าเฉลี่ยนี้คิดจากเดือนที่มีข้อมูลเท่านั้น ให้เพิ่มแถวเงินเดือนที่ใช้อยู่เมื่อ '+lab(first); }
+    else { w.hidden=true; }
+  }
+  function draw(){
+    var tb=$('rows'); tb.textContent='';
+    rows.forEach(function(r,i){
+      var tr=document.createElement('tr');
+      [['m',1,12,1],['y',2500,2700,1],['s',0,999999,10]].forEach(function(f){
+        var td=document.createElement('td'), inp=document.createElement('input');
+        inp.type='number'; inp.id='r'+i+f[0]; inp.min=f[1]; inp.max=f[2]; inp.step=f[3]; inp.value=r[f[0]];
+        inp.setAttribute('aria-label',(f[0]==='m'?'เดือนที่เริ่มใช้':f[0]==='y'?'ปี พ.ศ.':'เงินเดือน')+' แถวที่ '+(i+1));
+        inp.addEventListener('input',function(){ r[f[0]]=parseFloat(inp.value)||0; calcAvg(); });
+        td.appendChild(inp); tr.appendChild(td);
+      });
+      var tc=document.createElement('td'); tc.className='cnt'; tc.id='c'+i; tr.appendChild(tc);
+      var tx=document.createElement('td'), b=document.createElement('button');
+      b.type='button'; b.className='btn x'; b.textContent='ลบ'; b.setAttribute('aria-label','ลบแถวที่ '+(i+1));
+      b.addEventListener('click',function(){ rows.splice(i,1); draw(); });
+      tx.appendChild(b); tr.appendChild(tx); tb.appendChild(tr);
+    });
+    calcAvg();
+  }
+  $('addrow').addEventListener('click',function(){
+    var l=rows.length?rows.reduce(function(a,b){return idx(b.m,b.y)>idx(a.m,a.y)?b:a}):{m:4,y:(parseInt($('ly').value)||2569)-5,s:0};
+    var k=idx(l.m,l.y)+6; if(!rows.length) k=idx(l.m,l.y);
+    rows.push({m:(k%12)+1,y:Math.floor(k/12),s:l.s}); draw();
+    var el=$('r'+(rows.length-1)+'s'); if(el){ el.focus(); el.select(); }
+  });
+  ['lm','ly'].forEach(function(i){$(i).addEventListener('input',calcAvg)});
+  $('tgl').addEventListener('click',function(){
+    var p=$('avgpanel'); p.hidden=!p.hidden; $('tgl').setAttribute('aria-expanded',String(!p.hidden));
+    if(!p.hidden) p.scrollIntoView({block:'nearest'});
+  });
+  $('useavg').addEventListener('click',function(){
+    if(!isFinite(result.avg)) return;
+    $('avg').value=Math.round(result.avg); if(isFinite(result.last)) $('sal').value=result.last;
+    $('gy').checked=true; run(); $('f').scrollIntoView({block:'center'});
+  });
+  draw();
+
+  /* ปุ่มสลับโหมดมืด/สว่าง: ค่าเริ่มต้นตามเครื่อง กดแล้วจำไว้ในเครื่องนี้ */
+  var root=document.documentElement, KEY='handbook-theme', tb=$('themebtn');
+  var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+  function cur(){return root.getAttribute('data-theme')||(mq&&mq.matches?'dark':'light')}
+  function paint(){tb.textContent=cur()==='dark'?'โหมดสว่าง':'โหมดมืด'}
+  try{var sv=localStorage.getItem(KEY);if(sv==='light'||sv==='dark')root.setAttribute('data-theme',sv)}catch(e){}
+  tb.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem(KEY,n)}catch(e){}paint()});
+  if(mq&&mq.addEventListener)mq.addEventListener('change',paint);
+  paint();
+
+})();
+</script>
+
+</body>
+</html>
